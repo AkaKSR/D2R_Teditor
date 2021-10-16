@@ -52,7 +52,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     // assetsRoot: path.resolve(__dirname, '../../backend/public'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'dist/static',
     // assetsPublicPath: '/',
     assetsPublicPath: '/d2r_teditor/',
 
