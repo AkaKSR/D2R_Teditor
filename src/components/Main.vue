@@ -1,19 +1,6 @@
 <template>
   <div>
-    <!-- <el-upload
-      class="upload-demo"
-      action="https://jsonplaceholder.typicode.com/posts/"
-      :on-preview="handlePreview"
-      :on-remove="handleRemove"
-      :before-remove="beforeRemove"
-      :file-list="fileList"
-    >
-      <el-button size="small" type="primary">Click to upload</el-button>
-      <div slot="tip" class="el-upload__tip">
-        jpg/png files with a size less than 500kb
-      </div>
-    </el-upload> -->
-
+    asdf
     <el-tabs type="border-card">
       <el-tab-pane label="보석">item-gems</el-tab-pane>
       <el-tab-pane label="접두사">
