@@ -54,7 +54,7 @@ module.exports = {
     // assetsRoot: path.resolve(__dirname, '../../backend/public'),
     assetsSubDirectory: 'static',
     // assetsPublicPath: '/',
-    assetsPublicPath: '/d2r_teditor/',
+    assetsPublicPath: '/d2r_teditor/dist',
 
     /**
      * Source Maps
