@@ -1,6 +1,12 @@
 <template>
   <div>
-    asdf
+    <el-button size="mini" type="primary" >저장</el-button>
+    <el-button
+      size="mini"
+      type="primary"
+      style="margin-bottom: 10px"
+      >다운로드</el-button
+    >
     <el-tabs type="border-card">
       <el-tab-pane label="보석">item-gems</el-tab-pane>
       <el-tab-pane label="접두사">
@@ -34,7 +40,9 @@ export default {
       fileList: [],
     };
   },
-  created() {},
+  created() {
+    console.log(this.$store.state);
+  },
   mounted() {},
   methods: {
     handleRemove(file, fileList) {

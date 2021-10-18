@@ -14,21 +14,3 @@ export default new Router({
     }
   ]
 })
-
-// import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-// import Main from '@/components/Main'
-
-// const routes = [
-//   {
-//     path: '/',
-//     name: 'Main',
-//     component: Main
-//   }
-// ]
-
-// const router = createRouter({
-//   history: createWebHashHistory(process.env.BASE_URL),
-//   routes
-// })
-
-// export default router
