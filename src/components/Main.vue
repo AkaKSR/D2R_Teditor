@@ -1,10 +1,7 @@
 <template>
   <div>
-    <el-row>
-      <el-col :span="3"> </el-col>
-
-      <el-col :span="21"> </el-col>
-    </el-row>
+    본 페이지는 아직 개발중 입니다.<br />
+    결론 = 아직 이용못하니 대충 보다 가시기 바랍니다.
   </div>
 </template>
 
