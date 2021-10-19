@@ -77,7 +77,7 @@
 import colors from "../resources/colors/index";
 
 export default {
-  name: "Main",
+  name: "Affixes_re",
   data() {
     return {
       colorsArr: [],
@@ -100,7 +100,24 @@ export default {
       );
     },
   },
-  created() {
+  async created() {
+    const loading = this.$loading({
+      lock: true,
+      text: "데이터를 불러오는중입니다. 사양에 따라 최대 1~3분정도 소요됩니다.",
+      spinner: "el-icon-loading",
+      background: "rgba(0, 0, 0, 0.7)",
+    });
+
+    await this.$http("/static/data/local/lng/strings/item-nameaffixes.json")
+      .then((response) => {
+        this.$store.state.strings.item_nameaffixes = response.data;
+        loading.close();
+      })
+      .catch((err) => {
+        this.$message.error("데이터 불러오기 실패");
+        loading.close();
+      });
+
     this.colorsArr = colors;
   },
   mounted() {},
