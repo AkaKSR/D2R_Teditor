@@ -4,9 +4,14 @@ import Router from 'vue-router'
 
 // Page Component
 import Main from '@/components/Main'
-import Gems_re from '@/components/GemsView'
-import Affixes_re from '@/components/AffixesView'
-import ItemName_re from '@/components/ItemNameView'
+
+import Gems_re from '@/components/resurrect/GemsView'
+import Affixes_re from '@/components/resurrect/AffixesView'
+import ItemName_re from '@/components/resurrect/ItemNameView'
+
+import Gems_le from '@/components/legacy/GemsView'
+import Affixes_le from '@/components/legacy/AffixesView'
+import ItemName_le from '@/components/legacy/ItemNameView'
 
 Vue.use(Router)
 
@@ -38,6 +43,21 @@ export default new Router({
       path: '/name_re',
       name: 'ItemName_re',
       component: ItemName_re
+    },
+    {
+      path: '/gems_le',
+      name: 'Gems_le',
+      component: Gems_le
+    },
+    {
+      path: '/affixes_le',
+      name: 'Affixes_le',
+      component: Affixes_le
+    },
+    {
+      path: '/name_le',
+      name: 'ItemName_le',
+      component: ItemName_le
     },
   ]
 })

@@ -74,10 +74,10 @@
 </template>
 
 <script>
-import colors from "../resources/colors/index";
+import colors from "../../resources/colors/index";
 
 export default {
-  name: "Affixes_re",
+  name: "Gems_re",
   data() {
     return {
       colorsArr: [],
@@ -92,7 +92,7 @@ export default {
   },
   computed: {
     filterSearch() {
-      return this.$store.state.strings.item_nameaffixes.filter(
+      return this.$store.state.strings_legacy.item_gems.filter(
         (data) =>
           (!this.filter.id || String(data.id).includes(this.filter.id)) &&
           (!this.filter.key || String(data.Key).includes(this.filter.key)) &&
@@ -109,10 +109,10 @@ export default {
     });
 
     await this.$http(
-      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings/item-nameaffixes.json"
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-gems.json"
     )
       .then((response) => {
-        this.$store.state.strings.item_nameaffixes = response.data;
+        this.$store.state.strings_legacy.item_gems = response.data;
         loading.close();
       })
       .catch((err) => {

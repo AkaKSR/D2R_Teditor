@@ -33,9 +33,9 @@
               <img src="./assets/d2o.png" height="24" width="24" />
               <span>레거시</span>
             </template>
-            <el-menu-item index="Gems">보석</el-menu-item>
-            <el-menu-item index="Affixes">접두사</el-menu-item>
-            <el-menu-item index="ItemName">아이템명</el-menu-item>
+            <el-menu-item index="Gems_le">보석</el-menu-item>
+            <el-menu-item index="Affixes_le">접두사</el-menu-item>
+            <el-menu-item index="ItemName_le">아이템명</el-menu-item>
           </el-submenu>
         </el-menu>
 
@@ -69,6 +69,8 @@ export default {
       var legacy = data.strings_legacy;
       var res = data.strings;
 
+      console.log("data = ", data);
+
       var res_key = Object.getOwnPropertyNames(res);
       res_key.splice(res_key.length - 1, res_key.length);
 
@@ -84,7 +86,7 @@ export default {
 
       // 레거시 데이터 투입
       for (var i = 0; i < legacy_key.length; i++) {
-        if (legacy[legacy_key[i].length != 0]) {
+        if (legacy[legacy_key[i]].length != 0) {
           genFile.setData(legacy_key[i].replace("_", "-"), "strings-legacy", legacy[legacy_key[i]]);
         }
       }

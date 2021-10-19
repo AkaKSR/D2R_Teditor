@@ -5,7 +5,7 @@ var json = {};
 var zip = new JSZip();
 
 function setData(key, type, data) {
-    json[key] = JSON.stringify(data, null, "\t");
+    json[key] = JSON.stringify(data, null, "  ");
 
     zip.folder("data").folder("local").folder("lng").folder(type).file(key + ".json", json[key]);
 }
