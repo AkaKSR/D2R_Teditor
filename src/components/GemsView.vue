@@ -103,7 +103,7 @@ export default {
   async created() {
     const loading = this.$loading({
       lock: true,
-      text: "Loading",
+      text: "데이터를 불러오는중입니다. 사양에 따라 최대 1~3분정도 소요됩니다.",
       spinner: "el-icon-loading",
       background: "rgba(0, 0, 0, 0.7)",
     });
