@@ -108,7 +108,9 @@ export default {
       background: "rgba(0, 0, 0, 0.7)",
     });
 
-    await this.$http("/static/data/local/lng/strings/item-nameaffixes.json")
+    await this.$http(
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-nameaffixes.json"
+    )
       .then((response) => {
         this.$store.state.strings.item_nameaffixes = response.data;
         loading.close();

@@ -108,8 +108,9 @@ export default {
       background: "rgba(0, 0, 0, 0.7)",
     });
 
-    // await this.$http("/static/data/local/lng/strings/item-gems.json")
-    await this.$http("https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-gems.json")
+    await this.$http(
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-gems.json"
+    )
       .then((response) => {
         this.$store.state.strings.item_gems = response.data;
         loading.close();
