@@ -92,7 +92,7 @@ export default {
   },
   computed: {
     filterSearch() {
-      return this.$store.state.strings.item_nameaffixes.filter(
+      return this.$store.state.strings.item_gems.filter(
         (data) =>
           (!this.filter.id || String(data.id).includes(this.filter.id)) &&
           (!this.filter.key || String(data.Key).includes(this.filter.key)) &&

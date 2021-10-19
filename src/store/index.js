@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 
 // import strings from './modules/strings'
 var strings = require('./modules/strings');
+var strings_legacy = require('./modules/strings-legacy');
 
 Vue.use(Vuex);
 
@@ -12,36 +13,22 @@ export default new Vuex.Store({
     // },
     state: {
         strings,
-        // strings: {
-            // gems: [],
-            // modifiers: [],
-            // nameaffixes: [],
-            // names: [],
-            // runes: [],
-            // levels: [],
-            // mercenaries: [],
-            // monsters: [],
-            // npcs: [],
-            // objects: [],
-            // presence_states: [],
-            // quests: [],
-            // shrines: []
-        // },
-        strings_legacy: {
-            gems: [],
-            modifiers: [],
-            nameaffixes: [],
-            names: [],
-            runes: [],
-            levels: [],
-            mercenaries: [],
-            monsters: [],
-            npcs: [],
-            objects: [],
-            presence_states: [],
-            quests: [],
-            shrines: []
-        }
+        strings_legacy
+        // strings_legacy: {
+        //     gems: [],
+        //     modifiers: [],
+        //     nameaffixes: [],
+        //     names: [],
+        //     runes: [],
+        //     levels: [],
+        //     mercenaries: [],
+        //     monsters: [],
+        //     npcs: [],
+        //     objects: [],
+        //     presence_states: [],
+        //     quests: [],
+        //     shrines: []
+        // }
     },
     getters: {},
     mutations: {},
