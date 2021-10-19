@@ -109,14 +109,13 @@ export default {
     });
 
     await this.$http(
-      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-gems.json"
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings/item-gems.json"
     )
       .then((response) => {
         this.$store.state.strings.item_gems = response.data;
         loading.close();
       })
       .catch((err) => {
-        console.log(err);
         this.$message.error("데이터 불러오기 실패");
         loading.close();
       });

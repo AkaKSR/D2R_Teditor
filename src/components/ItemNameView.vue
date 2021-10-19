@@ -109,7 +109,7 @@ export default {
     });
 
     await this.$http(
-      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-names.json"
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings/item-names.json"
     )
       .then((response) => {
         this.$store.state.strings.item_names = response.data;

@@ -109,7 +109,7 @@ export default {
     });
 
     await this.$http(
-      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings-legacy/item-nameaffixes.json"
+      "https://raw.githubusercontent.com/AkaKSR/d2r_teditor/main/static/data/local/lng/strings/item-nameaffixes.json"
     )
       .then((response) => {
         this.$store.state.strings.item_nameaffixes = response.data;
