@@ -20,6 +20,11 @@ export default new Router({
       component: Main
     },
     {
+      path: '/d2r_teditor',
+      name: "D2RMain",
+      component: Main
+    },
+    {
       path: '/gems_re',
       name: 'Gems_re',
       component: Gems_re
